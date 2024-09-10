@@ -6,116 +6,201 @@
     <title>Kumar Gaurav - Data Science Analytics</title>
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #ecf0f1;
-            --text-color: #333;
+            --bg-color: #0a192f;
+            --text-color: #8892b0;
+            --heading-color: #ccd6f6;
+            --accent-color: #64ffda;
+            --section-bg: #112240;
         }
         
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0 150px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 100px 0;
         }
 
         header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
         }
 
-        h1, h2 {
-            color: var(--secondary-color);
+        nav a {
+            color: var(--heading-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        h1, h2, h3 {
+            color: var(--heading-color);
+        }
+
+        .hero {
+            margin-bottom: 100px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            color: var(--text-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 540px;
         }
 
         .section {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
+            margin-bottom: 100px;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-right: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 300px;
+            background-color: var(--text-color);
         }
 
         .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
         .skill {
-            text-align: center;
-            margin: 10px;
-            width: 100px;
+            background-color: var(--section-bg);
+            padding: 20px;
+            border-radius: 4px;
             transition: transform 0.3s ease;
         }
 
         .skill:hover {
-            transform: scale(1.1);
+            transform: translateY(-5px);
         }
 
         .skill img {
             width: 50px;
             height: 50px;
             object-fit: contain;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .project {
-            background-color: #f9f9f9;
-            border-left: 4px solid var(--primary-color);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 0 8px 8px 0;
+            background-color: var(--section-bg);
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            color: var(--accent-color);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            margin-top: 2rem;
+            padding: 20px 0;
+            font-size: 14px;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
+        @media (max-width: 768px) {
+            body {
+                padding: 0 50px;
             }
-            .skill {
-                width: 80px;
+            .hero h1 {
+                font-size: 48px;
+            }
+            .hero h2 {
+                font-size: 40px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kumar Gaurav</h1>
-        <p>Data Science Analytics Professional</p>
-    </header>
-
     <div class="container">
-        <section class="section">
-            <h2>About Me</h2>
+        <header>
+            <div class="logo">KG</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Hi, my name is</h1>
+            <h2>Kumar Gaurav.</h2>
+            <h2>I turn data into insights.</h2>
+            <p>I'm a Data Scientist specializing in Natural Language Processing (NLP) for AI solutions. Currently, I'm focused on building intelligent systems for financial process automation at <span class="highlight">Upwork</span>.</p>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
             <p>Versatile Data Scientist with 2+ years of experience, specializing in Natural Language Processing (NLP) for AI solutions, including DocumentAI and Text Analytics. Primarily involved with Credit risk, Credit Lending, Banking, and Financial Process Automation (FPA).</p>
         </section>
 
-        <section class="section">
-            <h2>Skills</h2>
+        <section id="experience" class="section">
+            <div class="section-title">
+                <h2>Where I've Worked</h2>
+            </div>
+            <div class="project">
+                <h3><span class="highlight">Data Science Analytics</span> @ Upwork</h3>
+                <p>Jan 2023 - Present</p>
+                <p>Financial process Automation using DocumentAI for auditing, financial reports, data entry, and tax filing.</p>
+            </div>
+            <div class="project">
+                <h3><span class="highlight">NLP Analyst</span> @ Prodigal</h3>
+                <p>Jul 2022 - Dec 2022</p>
+                <p>Involved in Call-Tag Analytics, Report Generation, and Scorecard Reports. Improved call feedback quality and agent performance by ~15%.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
             <div class="skills">
                 <div class="skill">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python logo">
@@ -152,41 +237,40 @@
             </div>
         </section>
 
-        <section class="section">
-            <h2>Work Experience</h2>
-            <div class="project">
-                <h3>Data Science Analytics - Upwork</h3>
-                <p>Jan 2023 - Present</p>
-                <p>Financial process Automation using DocumentAI for auditing, financial reports, data entry, and tax filing.</p>
+        <section id="projects" class="section">
+            <div class="section-title">
+                <h2>Some Things I've Built</h2>
             </div>
-            <div class="project">
-                <h3>NLP Analyst - Prodigal</h3>
-                <p>Jul 2022 - Dec 2022</p>
-                <p>Involved in Call-Tag Analytics, Report Generation, and Scorecard Reports. Improved call feedback quality and agent performance by ~15%.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Dhan-Lakshmi</h3>
-                <p>A ChatGPT-powered Financial AI Chatbot for bank statement analysis.</p>
-            </div>
-            <div class="project">
-                <h3>JobHunt360</h3>
-                <p>Dashboard for Information Discovery in the Job Street market, similar to LinkedIn Job search.</p>
+            <div class="projects">
+                <div class="project">
+                    <h3>Dhan-Lakshmi</h3>
+                    <p>A ChatGPT-powered Financial AI Chatbot for bank statement analysis.</p>
+                </div>
+                <div class="project">
+                    <h3>JobHunt360</h3>
+                    <p>Dashboard for Information Discovery in the Job Street market, similar to LinkedIn Job search.</p>
+                </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Education</h2>
-            <p>MBA, Operations Research - ISBR Business School, 2021</p>
-            <p>Bachelor of Engineering, Computer Science - Gujarat Technological University, 2018</p>
+        <section id="education" class="section">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="project">
+                <h3>MBA, Operations Research</h3>
+                <p>ISBR Business School, 2021</p>
+            </div>
+            <div class="project">
+                <h3>Bachelor of Engineering, Computer Science</h3>
+                <p>Gujarat Technological University, 2018</p>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>Contact: kggaurav25674164@gmail.com | Phone: +91 9724080157 | Location: Karnataka, India</p>
+        <p>Designed & Built by Kumar Gaurav</p>
+        <p>kggaurav25674164@gmail.com | +91 9724080157 | Karnataka, India</p>
     </footer>
 </body>
 </html>
