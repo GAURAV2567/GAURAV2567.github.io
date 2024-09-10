@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Gaurav - Data Science Analytics</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2 {
+            color: var(--secondary-color);
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skill {
+            text-align: center;
+            margin: 10px;
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .skill img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+        .project {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .skill {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kumar Gaurav</h1>
+        <p>Data Science Analytics Professional</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Versatile Data Scientist with 2+ years of experience, specializing in Natural Language Processing (NLP) for AI solutions, including DocumentAI and Text Analytics. Primarily involved with Credit risk, Credit Lending, Banking, and Financial Process Automation (FPA).</p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python logo">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn logo">
+                    <p>Machine Learning</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL logo">
+                    <p>SQL</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau logo">
+                    <p>Data Visualization</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo">
+                    <p>Cloud Computing</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/TensorFlow_logo.svg" alt="TensorFlow logo">
+                    <p>NLP & Deep Learning</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git logo">
+                    <p>Version Control</p>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas logo">
+                    <p>Data Analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="project">
+                <h3>Data Science Analytics - Upwork</h3>
+                <p>Jan 2023 - Present</p>
+                <p>Financial process Automation using DocumentAI for auditing, financial reports, data entry, and tax filing.</p>
+            </div>
+            <div class="project">
+                <h3>NLP Analyst - Prodigal</h3>
+                <p>Jul 2022 - Dec 2022</p>
+                <p>Involved in Call-Tag Analytics, Report Generation, and Scorecard Reports. Improved call feedback quality and agent performance by ~15%.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Dhan-Lakshmi</h3>
+                <p>A ChatGPT-powered Financial AI Chatbot for bank statement analysis.</p>
+            </div>
+            <div class="project">
+                <h3>JobHunt360</h3>
+                <p>Dashboard for Information Discovery in the Job Street market, similar to LinkedIn Job search.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <p>MBA, Operations Research - ISBR Business School, 2021</p>
+            <p>Bachelor of Engineering, Computer Science - Gujarat Technological University, 2018</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Contact: kggaurav25674164@gmail.com | Phone: +91 9724080157 | Location: Karnataka, India</p>
+    </footer>
+</body>
+</html>
