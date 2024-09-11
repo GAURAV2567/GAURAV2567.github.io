@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .message {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Redirecting...</h1>
+        <p>If you are not redirected automatically, please click <a id="redirect-link" href="#">here</a>.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const project = urlParams.get('project');
+            let redirectUrl = '#';
+
+            // Add your project redirects here
+            const projectRedirects = {
+                'dhan-lakshmi': 'https://example.com/dhan-lakshmi',
+                'dhan-lakshmi-demo': 'https://example.com/dhan-lakshmi-demo',
+                'jobhunt360': 'https://example.com/jobhunt360',
+                'jobhunt360-demo': 'https://example.com/jobhunt360-demo',
+                'esg-scoring': 'https://example.com/esg-scoring',
+                'esg-scoring-demo': 'https://example.com/esg-scoring-demo'
+            };
+
+            if (project && projectRedirects[project]) {
+                redirectUrl = projectRedirects[project];
+                window.location.href = redirectUrl;
+            }
+
+            document.getElementById('redirect-link').href = redirectUrl;
+        });
+    </script>
+</body>
+</html>
