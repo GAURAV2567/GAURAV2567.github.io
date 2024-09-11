@@ -243,6 +243,52 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+/* Project Detail Page Styles */
+#project-detail {
+    padding: 80px 0;
+}
+
+#project-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.project-detail-image {
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#project-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#project-description p {
+    margin-bottom: 15px;
+}
+
+#live-link {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 12px 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #project-detail h1 {
+        font-size: 2em;
+    }
+
+    .project-detail-image {
+        margin-bottom: 20px;
+    }
+}
+
 /* Contact Section Styles */
 #contact {
     background-color: var(--bg-color);
