@@ -73,9 +73,21 @@ h1, h2 {
 
 /* About Section Styles */
 #about {
-    text-align: center;
+    text-align: left;
     background-color: var(--card-bg-color);
-    padding: 100px 0;
+    padding: 40px 0;
+}
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#about .left-column,
+#about .right-column {
+    flex: 1;
+    padding: 0 20px;
 }
 
 #about h1 {
@@ -89,7 +101,7 @@ h1, h2 {
 
 .social-links a {
     font-size: 24px;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
     color: var(--secondary-color);
     transition: color 0.3s ease;
 }
@@ -110,6 +122,45 @@ h1, h2 {
 
 .btn:hover {
     background-color: #2980b9;
+}
+
+/* New styles for smaller text in the right column */
+#about .right-column {
+    font-size: 0.8em;
+    line-height: 1;
+}
+
+#about .right-column h3 {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+#about .right-column ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#about .right-column li {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about .container {
+        flex-direction: column;
+    }
+
+    #about .left-column,
+    #about .right-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    #about .right-column {
+        margin-top: 30px;
+    }
 }
 
 /* Portfolio Section Styles */
