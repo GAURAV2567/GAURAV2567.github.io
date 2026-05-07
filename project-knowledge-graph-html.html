@@ -3,51 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhan-Lakshmi - Kumar Gaurav Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a; --surface: #111111; --surface2: #1a1a1a;
+            --border: #222222; --accent: #00e5a0; --text: #e8e8e8;
+            --muted: #666; --mono: 'Space Mono', monospace; --sans: 'DM Sans', sans-serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body { background:var(--bg); color:var(--text); font-family:var(--sans); font-size:16px; line-height:1.6; overflow-x:hidden; }
+        body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:999; opacity:0.5; }
+        nav { position:fixed; top:0; width:100%; z-index:100; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:rgba(10,10,10,0.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+        .nav-logo { font-family:var(--mono); font-size:0.85rem; color:var(--accent); letter-spacing:0.05em; text-decoration:none; }
+        nav ul { list-style:none; display:flex; gap:32px; }
+        nav ul li a { font-family:var(--mono); font-size:0.75rem; text-decoration:none; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; transition:color 0.2s; }
+        nav ul li a:hover { color:var(--accent); }
+        main { padding-top: 80px; }
+        .container { max-width: 860px; margin: 0 auto; padding: 60px 40px; }
+        .back-link { font-family:var(--mono); font-size:0.75rem; color:var(--muted); text-decoration:none; letter-spacing:0.1em; text-transform:uppercase; display:inline-flex; align-items:center; gap:8px; margin-bottom:48px; transition:color 0.2s; }
+        .back-link:hover { color:var(--accent); }
+        .project-cat { font-family:var(--mono); font-size:0.72rem; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:12px; }
+        h1 { font-family:var(--mono); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700; line-height:1.15; margin-bottom:24px; }
+        .project-img { width:100%; max-height:400px; object-fit:cover; border:1px solid var(--border); margin-bottom:40px; filter:brightness(0.85); }
+        .desc-block { margin-bottom:32px; }
+        .desc-block p { color:#aaa; font-size:0.95rem; line-height:1.8; margin-bottom:16px; }
+        .desc-block ul { padding-left:0; display:flex; flex-direction:column; gap:10px; }
+        .desc-block ul li { list-style:none; padding-left:20px; position:relative; color:#aaa; font-size:0.9rem; line-height:1.7; }
+        .desc-block ul li::before { content:'→'; position:absolute; left:0; color:var(--accent); }
+        .tag-row { display:flex; flex-wrap:wrap; gap:8px; margin:28px 0; }
+        .tag { font-family:var(--mono); font-size:0.68rem; padding:5px 12px; background:var(--surface2); color:var(--muted); border:1px solid var(--border); letter-spacing:0.05em; }
+        .cta-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:40px; }
+        .btn-primary { font-family:var(--mono); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; padding:14px 28px; background:var(--accent); color:#000; text-decoration:none; font-weight:700; transition:all 0.2s; display:inline-block; }
+        .btn-primary:hover { background:#fff; }
+        .btn-outline { font-family:var(--mono); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; padding:14px 28px; border:1px solid var(--border); color:var(--muted); text-decoration:none; display:inline-block; transition:all 0.2s; }
+        .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+        footer { background:var(--bg); border-top:1px solid var(--border); padding:28px 40px; display:flex; justify-content:space-between; }
+        footer p { font-family:var(--mono); font-size:0.72rem; color:var(--muted); }
+        @media(max-width:600px){ .container{padding:40px 20px;} nav{padding:16px 20px;} nav ul{gap:16px;} }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
+<nav>
+    <a href="index.html" class="nav-logo">KG // AI_ENGINEER</a>
+    <ul>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a href="index.html#skills">Stack</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+<main><div class="container">
+<a href="index.html#portfolio" class="back-link">← Back to Work</a>
+<div class="project-cat">NLP · Knowledge Graph</div>
+<h1>People Analytics Knowledge Graph</h1>
+<img class="project-img" src="https://dist.neo4j.com/wp-content/uploads/20211008041037/KSATT-data-model-1-768x431.png" alt="People Analytics Knowledge Graph">
+<div class="desc-block"><p>Developed a ground-up clone of the NASA People Analytics Framework during tenure at Entomo (KPISoft) — taken from concept to pre-production. The system maps skills, occupations, training records, and mission data into a unified Neo4j knowledge graph, improving internal search speed by ~40%.</p>
             <ul>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="project-detail">
-            <div class="container">
-                <h1 id="project-title">People Analytics Knowledge Graph</h1>
-                <img id="project-image" src="https://dist.neo4j.com/wp-content/uploads/20211008041037/KSATT-data-model-1-768x431.png" alt="Knowledge Graph Project" class="project-detail-image">
-                <div id="project-description">
-                    <p>People Analytics Knowledge Graph: Advanced Skills Discovery and Workforce Insights</p>
-                    <p><em>Developed a Clone of The NASA People Analytics Framework from ground-up till pre-production phase, during my tenure at Entomo(KPISoft)</em>.<br> <br/>Key features include:</p>
-                    <ul>
-                        <li>Comprehensive Data Integration: Combines diverse data sources including employee information, occupations, training records, and mission data into a unified knowledge graph.</li>
-                        <li>Advanced Skills Identification: Utilizes natural language processing and machine learning techniques (e.g., Doc2Vec) to extract and infer skills from various textual sources.</li>
-                        <li>Dynamic Relationship Mapping: Establishes connections between employees, skills, occupations, and training, enabling multidimensional analysis of workforce capabilities.</li>
-                        <li>Predictive Analytics: Employs graph algorithms and data science techniques to identify skills gaps, suggest career paths, and support succession planning.</li>
-                        <li>Talent Marketplace: Facilitates internal job matching by comparing employee profiles with job requirements based on identified skills and competencies.</li>
-                        <li>Strategic Workforce Alignment: Provides insights into skill distribution across projects, programs, and missions, supporting strategic decision-making.</li>
-                    </ul>
-                    <p><br/>Check out the detailed process of implementation below</p>
-                </div>
-                <a href="https://youtu.be/_QPO2I-2tKk?si=aSC2xf3urwDMbu-A" id="live-link" class="btn" target="_blank">Project Demo</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Kumar Gaurav. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <li>Comprehensive data integration across employee, occupation, training, and mission data</li>
+                <li>Advanced skills identification using Doc2Vec and NLP extraction from textual sources</li>
+                <li>Dynamic relationship mapping between employees, skills, and career paths</li>
+                <li>Predictive analytics for skills gap analysis and succession planning</li>
+                <li>Internal talent marketplace — CV vs. job requirement matching</li>
+                <li>Strategic workforce alignment across projects and missions</li>
+            </ul></div>
+<div class="tag-row"><span class="tag">Neo4j</span><span class="tag">Doc2Vec</span><span class="tag">NLP</span><span class="tag">Python</span><span class="tag">Knowledge Graph</span><span class="tag">People Analytics</span></div>
+<div class="cta-row"><a href="https://youtu.be/_QPO2I-2tKk?si=aSC2xf3urwDMbu-A" class="btn-primary" target="_blank">Demo Video</a><a href="index.html#portfolio" class="btn-outline">← Back to Work</a></div>
+</div></main>
+<footer><p>© 2025 Kumar Gaurav</p><p>Bengaluru, India</p></footer>
+</body></html>
